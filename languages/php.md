@@ -1,5 +1,5 @@
 # Example Skeleton Main Program
-```
+```php
 <?php
 include 'something.php';
 echo "hello PHP";
@@ -7,7 +7,7 @@ echo "hello PHP";
 ```
 
 # Comments
-```
+```php
 //this is single line comment
 /*
 this is a 
@@ -18,20 +18,20 @@ multiline comment
 # Console Input/Output
 
 ## Output
-```
+```php
 echo "Hello World!";
 echo("Hello World!");
 print("Hello World!");
 ```
 
 ## Input
-```
+```php
 $input = readline("Enter a line: ");
 ```
 
 # Namespaces
 Create `mynamespace.php` (doesn't have to be named to match though):
-```
+```php
 <?php namespace mynamespace;
   class MyClassA {
     static function says() {echo 'fooooo';}  
@@ -39,7 +39,7 @@ Create `mynamespace.php` (doesn't have to be named to match though):
 ?>
 ```
 Then you can import it from another class using:
-```
+```php
 include 'mynamespace.php';
 \mynamespace\MyClassA::says();
 ```
@@ -47,7 +47,7 @@ include 'mynamespace.php';
 # Classes
 
 ## Declaration
-```
+```php
 <?php namespace myappmodels;
   class MyClassA {
 	public $Name;
@@ -69,7 +69,7 @@ include 'mynamespace.php';
 ```
 
 ## Inheritance
-```
+```php
 <?php namespace myappmodels;
 include 'myclassA.php';
 
@@ -89,7 +89,7 @@ include 'myclassA.php';
 ```
 
 ## Instantiation and Method Invocation
-```
+```php
 include 'myclassA.php';
 $mca = new myappmodels\MyClassA("1000");
 $mca->DoSomething();
@@ -97,7 +97,7 @@ $mca->DoSomething();
 
 # Functions
 A function can be locally scoped or a static function in a class
-```
+```php
 // local scope function
 function MyFunction($arg1, $arg2 = "default value")
 {
@@ -128,13 +128,13 @@ $greet('World');
 # Variables
 
 ## Declaration/Assignment
-```
+```php
 // created once a value is assigned, need to prefix with "$":
 $someInt = 123;
 ```
 
 ## Ternary Operator
-```
+```php
 // (evaluate bool expression result) ? <return_if_true> : <else_return_this> ;
 $someVariable = ($otherVariable > 0) ? 4535 : 0;
 ```
@@ -142,7 +142,7 @@ $someVariable = ($otherVariable > 0) ? 4535 : 0;
 ## Global Variables
 All PHP variables generally only have a single (global) scope. This single scope includes included and required files
 An exception is where the variable scope is local eg. in a function or class
-```
+```php
 <?php
 $a = "something";
 include 'b.inc';
@@ -153,7 +153,7 @@ $a = "changed";
 ```
 
 ## Data Basic Types
-```
+```php
 $my_int = 1; //between -2,147,483,648 and 2,147,483,647
 $my_float = 3.25;
 $my_bool = false || true;
@@ -161,7 +161,7 @@ $something = null;
 ```
 
 ## Data Basic Type Comparison
-```
+```php
 $a == $b // juggle types and then compare if they are equal (beware of type confusion)
 $a === $b // must be identical types and then compare if they are equal
 $a != $b // juggle types, compare if they are equal and return if they are not equal (beware of type confusion)
@@ -175,7 +175,7 @@ $a <=> $b // returns -1 if a < b, 0 if a == b, 1 if a > b8
 ```
 
 ## Logical Operators (Boolean Operands)
-```
+```php
 $a and $b
 $a && $b // AND
 $a or $b
@@ -187,7 +187,7 @@ $a xor $b // true if a or b is true but not both, false if a and b are the same
 # Data Structures
 
 ## array
-```
+```php
 $ia = array(1,2,3);
 $sa = array("one","two","three","four");
 
@@ -221,7 +221,7 @@ if(in_array("six", $sa)) {
 
 ## dictionary
 An Associative Array is the PHP equivalent of a dictionary
-```
+```php
 $my_dict = array();
 $my_dict = array("a"=>1,"b"=>2);
 $my_dict["c"] = 3; // my_dict is now {'a':1, 'b':2, 'c':3}
@@ -240,7 +240,7 @@ if (array_key_exists("a",$my_dict)) // true
 
 ## set
 PHP doesn't have a builtin Set data structure, you can use the DS extension (https://www.php.net/manual/en/book.ds.php), or emulate one using an Associative Array
-```
+```php
 use Ds\Set;
 $numbers = new Set([1, 2, 3]);
 
@@ -265,7 +265,7 @@ foreach($my_set as $key => $value) {
 # Control Flow Statements
 
 ## if/else
-```
+```php
 if ($someVariable < 10) {
     doThis();
 }
@@ -278,7 +278,7 @@ else {
 ```
 
 ## for
-```
+```php
 for ($i = 0; i < 101; $i++) {
     $x = doSomething($i)
 	if ($x == 123) {
@@ -293,7 +293,7 @@ for ($i = 0; i < 101; $i++) {
 ```
 
 ## while
-```
+```php
 while ($someBooleanCondition) {
     $x = doSomething();
 	if ($x == 123) {
@@ -312,7 +312,7 @@ do {
 ```
 
 ## switch/case
-```
+```php
 switch($month) {
 	case 1:  // execute if $month == 1
 		$monthString = "January";
@@ -327,7 +327,7 @@ switch($month) {
 ```
 
 # Exception Handling
-```
+```php
 try {
 	//...
 	if($divisor == 0) {
@@ -350,7 +350,7 @@ finally {
 # Numbers
 
 ## Operators
-```
+```php
 $x = 10;
 $y = 5;
 $x + $y == 15
@@ -371,12 +371,12 @@ $--x; // decrement by 1 then return result
 ```
 
 ## Absolute Value
-```
+```php
 $y = abs($x);
 ```
 
 ## Min/Max
-```
+```php
 min($x,$y) == 5
 max($x,$y) == 10
 
@@ -385,14 +385,14 @@ $maxval = max($array_of_ints);
 ```
 
 ## Floor/Ceiling
-```
+```php
 $f = 3.634;
 floor($f) == 3
 ceil($f) == 4
 ```
 
 ## Convert Between Int/Float
-```
+```php
 (int)$f // cast
 round($f) == 3  // float to int
 
@@ -401,7 +401,7 @@ $x = 10; $x == 10.0 // true, PHP will convert int to float as required
 ```
 
 ## Parse Number from String
-```
+```php
 $intresult = (int) "27";
 $intresult = intval("27");
 
@@ -410,14 +410,14 @@ $dresult = floatval("27.89721");
 ```
 
 ## Random
-```
+```php
 $r = random_int(1,10); // this is a cryptographically secure function
 ```
 
 # Strings
 
 ## Literals
-```
+```php
 $singleLineStr = "single line"; // can use single or double quotes
 $multiLineStr = "multi line...
 ...string
@@ -430,13 +430,13 @@ MLS;
 ```
 
 ## Concatenation
-```
+```php
 $str1.$str2
 $str1 .= $str2 ;
 ```
 
 ## Formatting
-```
+```php
 $msg0 = "Something $str1 and string {$x->foo()}"; // use curly braces as delimiter for complex expressions
 $msg1 = sprintf("An int %d and string %s",123,"test"); // msg1.Equals("An int 123 and string test");
 $msg2 = sprintf("Formatting examples, an int %0d, a float to 3 places %.3f, and hex %2X, binary %08b", 3, 1045.89735, 0x2F, 0x2F);
@@ -444,13 +444,13 @@ $msg2 = sprintf("Formatting examples, an int %0d, a float to 3 places %.3f, and 
 ```
 
 ## Convert Types to a String Representation
-```
+```php
 $svs = print_r($someObject,true);
 $svs = "This will obtain a string representation of {$someObject}";
 ```
 
 ## Strip/Trim
-```
+```php
 $xs = ",a,b,c,,";
 $xst = trim($xs); // will remove whitespace at both ends of the string
 $xst = trim($xs, ",:"); // will remove the specified characters from both ends, in this case the output is 'a,b,c'
@@ -459,42 +459,42 @@ $xst = rtrim($xs, ","); // will remove the specified characters from end, in thi
 ```
 
 ## Split
-```
+```php
 $xs = ",a,b,c,,";
 $tokenList = explode(",", $xs); // empty strings will be included as elements, in this case result is [,'a','b','c',,]
 ```
 
 ## Replace
-```
+```php
 $tx = str_replace(",",":",$xs); // tx is ':a:b:c::'
 $y = "The Trees";
 $ty = str_replace("Trees","Forest",$y); // ty is "The Forest"
 ```
 
 ## StartsWith
-```
+```php
 if (strpos($y, "The") === 0) {
 ```
 
 ## EndsWith
-```
+```php
 $check = "Trees";
 if (strpos($y, $check) === strlen($y) - strlen($check)) {
 ```
 
 ## Find a Substring
-```
+```php
 strpos($y, "Trees") === 4 //find first occurrence of substring, returns false if not found
 ```
 
 ## Select a Substring
-```
+```php
 $oy = substr($y,4); // slice from 4th character to the end of the string, returns: "Trees"
 $oy = substr($y,4,2); // (startIndex, lengthOfSlice), returns: "Tr"
 ```
 
 ## Regex
-```	 
+```php	 
 // find simple pattern, get list of all occurrences
 
 $matches = array();
@@ -514,7 +514,7 @@ print("{$matches['ipaddr']} {$matches['url']}\n");
 # Binary Bytes/Buffers
 
 ## Declaration
-```
+```php
 $key = 0x65; //hex literal
 $key = bindec('01100101'); //from binary string
 $header = array(0xFF,0xC3,0x00,0x00);
@@ -525,7 +525,7 @@ $byte_array = unpack('C*', '<h1>Hello World</h1>'); //convert string to associat
 ```
 
 ## Bytearray/Buffer Operations
-```
+```php
 // see https://www.php.net/manual/en/function.pack.php for full reference, but some common pack/unpack codes are:
 // C : unsigned char
 // S : unsigned short (16bit, machine byte order)
@@ -542,43 +542,43 @@ $byte_array = unpack('C*', $binaryinput); //convert binary input data to associa
 
 ## Bitwise Operations 
 
-```
+```php
 $a = bindec("11011001"); //0xD9
 $b = bindec("10011101"); //0x9D
 ```
 
 ### And
-```
+```php
 // a & b
 sprintf("%08b\n",($a & $b)) === "10011001"
 ```
 
 ### Or
-```
+```php
 // a | b
 sprintf("%08b\n",($a | $b)) === "11011101"
 ```
 
 ### Xor
-```
+```php
 // a ^ b
 sprintf("%08b\n",($a ^ $b)) === "01000100"
 ```
 
 ### Not
-```
+```php
 // a ^ 0xFF
 sprintf("%08b\n",($a ^ 0xFF)) === "00100110"
 ```
 
 ### Shift Left/Right
-```
+```php
 // a >> 4, or a << 5
 sprintf("%08b\n",($a >> 4)) === "00001101"
 ```
 
 # CLI Argument Parsing
-```
+```php
 // $argv[0] is the script name
 // root@localhost:/# php test2.php blah --test=123
 print_r($argv);
@@ -593,14 +593,14 @@ Array
 ```
 
 # Execute Shell Commands
-```
+```php
 $cmd_output = shell_exec("ls / -ltr"); // returns null if an error occurred
 $last_line_of_cmd_output = exec("ls / -ltr", $array_all_output_lines, $exit_code); // also returns null if an error occurred
 system("ls / -ltr"); // prints output to stdout
 ```
 
 # File Operations
-```
+```php
 // file modes
 /*
 r 	Open a file for read only. File pointer starts at the beginning of the file
@@ -614,7 +614,7 @@ x+ 	Creates a new file for read/write. Returns FALSE and an error if file alread
 */
 ```
 ## Open File and Read
-```
+```php
 $filename = "test.txt";
 $myfile = fopen($filename, "r") or die("Unable to open file!");
 
@@ -642,7 +642,7 @@ $byte_array = unpack('C*', $bindata); //convert binary input data to associative
 ```
 
 ## Open File and Write
-```
+```php
 $filename = "test.txt";
 $myfile = fopen($filename, "w") or die("Unable to open file!");
 
@@ -660,7 +660,7 @@ fclose($myfile);
 ```
 
 ## Skip To File Location
-```
+```php
 // fseek(resource $stream, int $offset_num_bytes, int $whence = SEEK_SET): int
 // 'whence' is optional and specifies positioning
 // default is SEEK_SET == absolute file positioning
@@ -673,14 +673,14 @@ fseek($fp, 8, SEEK_CUR); // move filestream pointer 8 bytes from current positio
 ```
 
 ## Close File
-```
+```php
 fclose($myfile);
 ```
 
 # Networking
 
 ## Sockets
-```
+```php
 // client send/receive
 
 $host    = "192.168.1.1";
@@ -717,7 +717,7 @@ socket_close($socket);
 ## Higher Level Network Protocols (HTTP Client, Server)
 
 ### HTTP client
-```
+```php
 //PHP builtin HTTP request wrapper can only make GET HTTP/1.0 requests
 $opts = [
     'https' => [
@@ -752,7 +752,7 @@ print($responseData."\n");
 ```
 
 ### HTTP server
-```
+```php
 <?php
 // router.php
 if (preg_match('/\.(?:png|jpg|jpeg|gif)$/', $_SERVER["REQUEST_URI"])) {
@@ -768,19 +768,19 @@ root@localhost:~/# php -S localhost:8000 router.php
 # JSON Serialization
 
 ## Serialize
-```
+```php
 $arr = array('a' => array(1,2,3), 'b' => 'test');
 print(json_encode($arr));
 ```
 
 ## Deserialize
-```
+```php
 $jsonstr = '{"a": [4, 5, 6], "b": "foo"}';
 $jsonobj = json_decode($jsonstr);
 ```
 
 # Object Introspection
-```
+```php
 $typestring = gettype($var);
 
 if(class_exists("MyClass")) {
@@ -801,7 +801,7 @@ if(method_exists($objInstance, "GetSomething")) {
 ```
 
 # Date/Time
-```
+```php
 //format will be 2021-10-11T01:06:03 +1100
 $datestr = date("Y-m-d\Th:i:s O");
 
@@ -815,7 +815,7 @@ echo "Created date is " . date("d/m/Y h:i:sa", $d);
 ```
 
 # Sleep
-```
+```php
 sleep(5); // seconds (int)
 ```
 

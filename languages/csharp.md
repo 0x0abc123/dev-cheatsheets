@@ -1,5 +1,5 @@
-0~# Example Skeleton Main Program
-```
+# Example Skeleton Main Program
+```csharp
 using System;
 
 namespace dotnettmp1
@@ -15,7 +15,7 @@ namespace dotnettmp1
 ```
 
 # Comments
-```
+```csharp
 //this is single line comment
 /*
 this is a 
@@ -26,18 +26,18 @@ multiline comment
 # Console Input/Output
 
 ## Output
-```
+```csharp
 Console.WriteLine("Hello World!");
 ```
 
 ## Input
-```
+```csharp
 string i = Console.ReadLine();
 ```
 
 # Namespaces
 Create `MyClassA.cs` (doesn't have to be named to match though):
-```
+```csharp
 namespace myapp.Models
 {
     class MyClassA
@@ -47,7 +47,7 @@ namespace myapp.Models
 }
 ```
 Then you can import it from another class using:
-```
+```csharp
 using myapp.Models;
 MyClassA mca = new MyClassA();
 ```
@@ -55,7 +55,7 @@ MyClassA mca = new MyClassA();
 # Classes
 
 ## Declaration
-```
+```csharp
 namespace myapp.Models
 {
     public class MyClassA
@@ -83,7 +83,7 @@ namespace myapp.Models
 ```
 
 ## Inheritance
-```
+```csharp
 namespace myapp.Models
 {
     public class MyClassSubA : MyClassA
@@ -104,14 +104,14 @@ namespace myapp.Models
 ```
 
 ## Instantiation and Method Invocation
-```
+```csharp
 MyClassA mca = new MyClassA("1000");
 mca.DoSomething();
 ```
 
 # Functions
 A function must be a static function in a class
-```
+```csharp
 public class FunctionModule
 {
 	public static string MyStaticFunction(string arg1, string arg2 = "default value")
@@ -135,7 +135,7 @@ Console.WriteLine(LNoArguments()); // prints 75
 # Variables
 
 ## Declaration/Assignment
-```
+```csharp
 // var is a generic value whose type will be determined at compile time
 var someVariable = 123;
 // can explicitly set the type:
@@ -143,14 +143,14 @@ int someInt = 123;
 ```
 
 ## Ternary Operator
-```
+```csharp
 // (evaluate bool expression result) ? <return_if_true> : <else_return_this> ;
 int someVariable = (otherVariable > 0) ? 4535 : 0;
 ```
 
 ## Global Variables
 A global variable must be a static member of a class
-```
+```csharp
 public class FunctionModule
 {
 	public static string SOME_VALUE = "global";
@@ -161,7 +161,7 @@ FunctionModule.SOME_VALUE = "changed";
 ```
 
 ## Data Basic Types
-```
+```csharp
 int my_int = 1;
 short s = 123;
 long l = 2189738723L;
@@ -178,7 +178,7 @@ var something = null;
 ```
 
 ## Data Basic Type Comparison
-```
+```csharp
 a == b // compare if they are equal (both must be the same type)
 a != b // compare if they are not equal (both must be the same type)
 a > b
@@ -188,7 +188,7 @@ a <= b
 ```
 
 ## Logical Operators (Boolean Operands)
-```
+```csharp
 a & b  // AND: evaluates both operands
 a && b // AND: evaluates right operand only if necessary
 a | b  // OR: evaluates both operands
@@ -199,7 +199,7 @@ a || b // OR: evaluates right operand only if necessary
 # Data Structures
 
 ## array
-```
+```csharp
 int[] ia = {1,2,3};
 string[] sa = {"one","two","three","four"};
 
@@ -215,7 +215,7 @@ foreach (string s in sa)
 ```
 
 ## list
-```
+```csharp
 using System.Collections.Generic;
 
 List<string> my_list = new List<string>();
@@ -255,7 +255,7 @@ This method does not work for an object that has a explicit operator method (fra
 ```
 
 ## dictionary
-```
+```csharp
 using System.Collections.Generic;
 
 Dictionary<string, int> my_dict = new Dictionary<string,int>();
@@ -282,7 +282,7 @@ if (my_dict.ContainsValue("a")) // true
 ```
 
 ## set
-```
+```csharp
 HashSet<string> my_set = new HashSet<string>();
 HashSet<string> my_set = new HashSet<string>() { "a", "b" };
 HashSet<string> set0 = new HashSet<string>() { "b", "c", "d" };
@@ -304,7 +304,7 @@ foreach (var e in my_set)
 # Control Flow Statements
 
 ## if/else
-```
+```csharp
 if (someVariable < 10) {
     doThis();
 }
@@ -317,7 +317,7 @@ else {
 ```
 
 ## for
-```
+```csharp
 for (int i = 0; i < 101; i++) {
     var x = doSomething(i);
 	if (x == 123) {
@@ -337,7 +337,7 @@ foreach (int element in fibNumbers)
 ```
 
 ## while
-```
+```csharp
 while (someBooleanCondition) {
     var x = doSomething();
 	if (x == 123) {
@@ -356,7 +356,7 @@ do {
 ```
 
 ## switch/case
-```
+```csharp
 switch(month) {
 	case 1:
 		monthString = "January";
@@ -371,7 +371,7 @@ switch(month) {
 ```
 
 # Exception Handling
-```
+```csharp
 try {
 	//...
 }
@@ -386,7 +386,7 @@ finally {
 # Numbers
 
 ## Operators
-```
+```csharp
 int x = 10;
 int y = 5;
 x + y == 15
@@ -398,36 +398,36 @@ y % x == 5  //modulo
 ```
 
 ## Absolute Value
-```
+```csharp
 Math.Abs(-x) == 10
 ```
 
 ## Min/Max
-```
+```csharp
 Math.Min(x,y) == 5
 Math.Max(x,y) == 10
 ```
 
 ## Floor/Ceiling
-```
+```csharp
 double f = 3.634;
 Math.Floor(f) == 3
 Math.Ceiling(f) == 4
 ```
 
 ## Convert Between Int/Float
-```
+```csharp
 (int)f == 3
 (double)x == 10.0
 ```
 
 ## Parse Number from String
-```
+```csharp
 int result = Int32.Parse("27");
 double dresult = Double.Parse("27.89721");
 ```
 ## Random
-```
+```csharp
 using System.Security.Cryptography;
 public static uint RandomUint() {
 	using (RNGCryptoServiceProvider crypto = new RNGCryptoServiceProvider())
@@ -443,7 +443,7 @@ uint ru = RandomUint();
 # Strings
 
 ## Literals
-```
+```csharp
 string singleLineStr = "single line"; // can use single or double quotes
 string multiLineStr = @"multi line...
 ...string";
@@ -451,12 +451,12 @@ string msg2 = "\u0048 unicode literal";
 ```
 
 ## Concatenation
-```
+```csharp
 str1 + str2
 ```
 
 ## Formatting
-```
+```csharp
 string msg0 = $"Something {str1} and string {x.foo()}";
 string msg1 = String.Format("An int {0} and string {1}",123,"test"); // msg1.Equals("An int 123 and string test");
 string msg2 = String.Format("Formatting examples, an int {0:D}, a float to 3 places {1:F3}, and hex {2:X}", 3, 1045.89735, 0x2F);
@@ -464,13 +464,13 @@ string msg2 = String.Format("Formatting examples, an int {0:D}, a float to 3 pla
 ```
 
 ## Convert Types to a String Representation
-```
+```csharp
 string svs = someVariable.ToString();
 $"This will obtain a string representation of {someVariable}"
 ```
 
 ## Strip/Trim
-```
+```csharp
 string xs = ",a,b,c,,";
 string xst = xs.Trim(new char[] { ',', ':'});
 
@@ -482,41 +482,41 @@ string xt = x.TrimEnd(','); // will remove the specified characters from end, in
 ```
 
 ## Split
-```
+```csharp
 string x = ",a,b,c,,";
 string[] tokenList = x.Split(new string[] {",",":"}); // the separator strings can be regexes 
 ```
 
 ## Replace
-```
+```csharp
 var tx = x.Replace(",",":"); // tx is ':a:b:c::'
 string y = "The Trees";
 string ty = y.Replace("Trees","Forest"); // ty is "The Forest"
 ```
 
 ## StartsWith
-```
+```csharp
 if (y.StartsWith("The")){
 ```
 
 ## EndsWith
-```
+```csharp
 if (y.EndsWith("Forest")){
 ```
 
 ## Find a Substring
-```
+```csharp
 y.IndexOf("Trees") == 4 //find first occurrence of substring, returns -1 if not found
 ```
 
 ## Select a Substring
-```
+```csharp
 y = y.Substring(4); // slice from 4th character to the end of the string, returns: "Trees"
 y = y.Substring(4,2); // (startIndex, lengthOfSlice), returns: "Tr"
 ```
 
 ## Regex
-```	 
+```csharp
 using System.Text.RegularExpressions;
 
 // find simple pattern, get list of all occurrences
@@ -535,7 +535,7 @@ foreach (Match m in Regex.Matches(line, "([0-9\\.]+).+GET (.+) HTTP")) {
 # Binary Bytes/Buffers
 
 ## Declaration
-```
+```csharp
 byte key = 0x65; //hex literal
 byte[] header = {0xFF,0xC3,0x00,0x00};
 char key = (char)0x00BC; //Char type is interpreted as unsigned 16bit value (unicode char)
@@ -544,7 +544,7 @@ byte[] info = new UTF8Encoding(true).GetBytes("test string");
 ```
 
 ## Bytearray/Buffer Operations
-```
+```csharp
 using System.IO;
 BinaryWriter bw = null;
 try {
@@ -570,7 +570,7 @@ byte[] ba = ms.ToArray();
 
 ## Bitwise Operations 
 
-```
+```csharp
 // C# doesn't have binary literals, so have to use hex
 byte a = 0xD9; //0b11011001
 byte b = 0x9D; //0b10011101
@@ -580,37 +580,37 @@ byte b = 0x9D; //0b10011101
 ```
 
 ### And
-```
+```csharp
 // a & b
 $"{Convert.ToString((byte)(a & b), 2).PadLeft(8, '0')}".Equals("10011001");
 ```
 
 ### Or
-```
+```csharp
 // a | b
 $"{Convert.ToString((byte)(a | b), 2).PadLeft(8, '0')}".Equals("11011101");
 ```
 
 ### Xor
-```
+```csharp
 // a ^ b
 $"{Convert.ToString((byte)(a ^ b), 2).PadLeft(8, '0')}".Equals("01000100");
 ```
 
 ### Not
-```
+```csharp
 // a ^ 0xFF
 $"{Convert.ToString((byte)(a ^ 0xFF), 2).PadLeft(8, '0')}".Equals("00100110");
 ```
 
 ### Shift Left/Right
-```
+```csharp
 // a >> 4, or a << 5
 $"{Convert.ToString((byte)(a >> 4), 2).PadLeft(8, '0')}".Equals("00001101");
 ```
 
 # CLI Argument Parsing
-```
+```csharp
 //the executable name is NOT in the argument list, so args[0] is the first supplied command line argument after the exe name
 static void Main(string[] args) {
     if (args.Length < 1)
@@ -620,7 +620,7 @@ static void Main(string[] args) {
 ```
 
 # Execute Shell Commands
-```
+```csharp
 using System.Diagnostics;
 
 Process proc = new Process {
@@ -640,11 +640,11 @@ while (!proc.StandardOutput.EndOfStream) {
 ```
 
 # File Operations
-```
+```csharp
 // file modes
 ```
 ## Open File and Read
-```
+```csharp
 // Read the file as one string.
 string filelines_as_one_string = System.IO.File.ReadAllText(@"C:\temp\pB.txt");
 
@@ -671,7 +671,7 @@ finally {
 ```
 
 ## Open File and Write
-```
+```csharp
 // WriteAllLines creates a file, writes a collection of strings to the file, and then closes the file.  You do NOT need to call Flush() or Close().
 string[] lines = { "First line", "Second line", "Third line" };
 System.IO.File.WriteAllLines(@"C:\temp\file.txt", lines);
@@ -707,7 +707,7 @@ finally {
 ```
 
 ## Skip To File Location
-```
+```csharp
 // FileStream.Seek(offset_num_bytes, whence)
 // 'whence' is optional and specifies positioning
 // default is SeekOrigin.Begin == absolute file positioning
@@ -734,14 +734,14 @@ finally {
 ```
 
 ## Close File
-```
+```csharp
 fileSteamObject.Close();
 ```
 
 # Networking
 
 ## Sockets
-```
+```csharp
 // client send/receive
 
 using System;  
@@ -834,7 +834,7 @@ public class SynchronousSocketServer {
 ## Higher Level Network Protocols (HTTP Client, Server)
 
 ### HTTP client
-```
+```csharp
 //dotnet 4.0
 using System;
 using System.IO;
@@ -863,7 +863,7 @@ class SimpleHttpClient
 ```
 
 ### HTTP server
-```
+```csharp
 using System.Text;
 using System.Net;
 ...
@@ -892,7 +892,7 @@ listener.Close();
 # JSON Serialization
 
 ## Serialize
-```
+```csharp
 using System.Text.Json;
 Dictionary<string, object> mydict = new Dictionary<string, object>()
 {
@@ -904,14 +904,14 @@ string js = JsonSerializer.Serialize(mydict); // js is '{"a": [1, 2, 3], "b": "t
 ```
 
 ## Deserialize
-```
+```csharp
 using System.Text.Json;
 string jsonstr = "{\"a\": [4, 5, 6], \"b\": \"foo\"}";
 Dictionary<string, object> mydict = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonstr);
 ```
 
 # Object Introspection
-```
+```csharp
 using System.Type;
 
 System.Type type = obj.GetType();
@@ -936,7 +936,7 @@ numberPropertyInfo.SetValue(calcInstance, 10.0, null);
 ```
 
 # Date/Time
-```
+```csharp
 //format will be 7/10/2021 6:24:06 PM
 DateTime dateTime = DateTime.Now;
 DateTime dateTime = new DateTime(2016, 7, 15, 3, 15, 0);
@@ -949,14 +949,14 @@ Console.WriteLine(unixTimeMilliseconds);
 ```
 
 # Sleep
-```
+```csharp
 System.Threading.Thread.Sleep(2500); // milliseconds
 ```
 
 # Multithreading
 
 ## Threads
-```
+```csharp
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -979,7 +979,7 @@ MyThing m1 = await getStuffAsync();
 ```
 
 ## Synchronization/Locking Primitives
-```
+```csharp
 using System.Threading;
 using System.Threading.Tasks;
 

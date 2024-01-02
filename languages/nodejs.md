@@ -1,12 +1,12 @@
 # Example Skeleton Main Program
-```
+```javascript
 // hw.js
 console.log('hello world!');
 // run with: nodejs hw.js
 ```
 
 # Comments
-```
+```javascript
 //this is single line comment
 /*
 this is a 
@@ -17,12 +17,12 @@ multiline comment
 # Console Input/Output
 
 ## Output
-```
+```javascript
 console.log("Hello World!");
 ```
 
 ## Input
-```
+```javascript
 function hello(name) {
     console.log(`hello ${name}!`);
 }
@@ -38,7 +38,7 @@ rl.on('line', function(line){
 ```
 
 # Namespaces
-```
+```javascript
 // filename: ./mymodule.js
 var mymodule = {
             info: function (info) { 
@@ -65,7 +65,7 @@ var log = require('./utility/log.js');
 # Classes
 
 ## Declaration
-```
+```javascript
 class MyClassA {
   constructor(initBar) {
     this.Bar = initBar;
@@ -89,7 +89,7 @@ var MyClassA = class {
 ```
 
 ## Inheritance
-```
+```javascript
 class MyClassSubA extends MyClassA
 {
         constructor()
@@ -106,13 +106,13 @@ class MyClassSubA extends MyClassA
 ```
 
 ## Instantiation and Method Invocation
-```
+```javascript
 var mca = new MyClassA("1000");
 mca.doSomething();
 ```
 
 # Functions
-```
+```javascript
 function MyFunction(arg1, arg2 = 'some default value') {
 	return "returns: "+arg1+", "+arg2;
 }
@@ -130,13 +130,12 @@ console.log(lambdatest(3));
 
 # Variables
 
-let -> limited to the scope of a block statement, or expression on which it is used
-var -> declares a variable globally, or locally to an entire function regardless of block scope. 
-The other difference between var and let is that the latter is initialized to a value only when a parser evaluates it (see below).
-const -> a const variable is still mutable but any object references cannot be changed to another object|null
+- let -> limited to the scope of a block statement, or expression on which it is used
+- var -> declares a variable globally, or locally to an entire function regardless of block scope.  The other difference between var and let is that the latter is initialized to a value only when a parser evaluates it (see below).
+- const -> a const variable is still mutable but any object references cannot be changed to another object|null
 
 ## Declaration/Assignment
-```
+```javascript
 // you don't specify the type:
 var someInt = 123;
 {
@@ -170,7 +169,7 @@ let a,b,rest;
 ```
 
 ## Ternary Operator
-```
+```javascript
 // (evaluate bool expression result) ? <return_if_true> : <else_return_this> ;
 var someVariable = (otherVariable > 0) ? 4535 : 0;
 
@@ -182,11 +181,11 @@ var someStringVal = otherStringVal || "default value";
 
 A var variable declared outside a function, becomes GLOBAL
 
-```
+```javascript
 ```
 
 ## Data Basic Types
-```
+```javascript
 var my_int = 1;
 typeof(my_int) == "number"  // true
 
@@ -215,7 +214,7 @@ var x = 0b1101; // binary literal
 ```
 
 ## Data Basic Type Comparison
-```
+```javascript
 $a == $b // juggle types and then compare if they are equal (beware of type confusion)
 $a === $b // must be identical types and then compare if they are equal
 $a != $b // juggle types, compare if they are equal and return if they are not equal (beware of type confusion)
@@ -228,7 +227,7 @@ $a <= $b
 ```
 
 ## Logical Operators (Boolean Operands)
-```
+```javascript
 a && b // AND: evaluates right operand only if necessary
 a || b // OR: evaluates right operand only if necessary
 !a    // NOT
@@ -237,7 +236,7 @@ a || b // OR: evaluates right operand only if necessary
 # Data Structures
 
 ## array/list
-```
+```javascript
 const my_list = ["one","two","three","four"];
 const my_list = new Array("one","two","three","four") ; //alternative declaration
 my_list[2] === "three"; // true
@@ -271,7 +270,7 @@ var all_matches = combined_list.filter(el => el.startsWith("s"));
 
 ## dictionary
 A dictionary is just a POJO without any methods
-```
+```javascript
 var my_dict = {};
 my_dict["a"] = 1; // my_dict is now {'a':1}
 my_dict["b"] = 2; // my_dict is now {'a':1, 'b':2}
@@ -294,7 +293,7 @@ if(Object.values(my_dict).indexOf(1) >= 0) { //...
 ```
 
 ## set
-```
+```javascript
 var my_set = new Set();
 var my_set = new Set(['a','b']);
 var set0 = new Set(["b", "c", "d"]);
@@ -317,7 +316,7 @@ my_set.forEach(x => processValue(x));
 # Control Flow Statements
 
 ## if/else
-```
+```javascript
 if (someVariable < 10) {
     doThis();
 }
@@ -330,7 +329,7 @@ else {
 ```
 
 ## for
-```
+```javascript
 for (let i = 0; i < 101; i++) {
     var x = doSomething(i);
 	if (x == 123) {
@@ -349,7 +348,7 @@ for (let element in fibNumbers) {
 ```
 
 ## while
-```
+```javascript
 while (someBooleanCondition) {
     var x = doSomething();
 	if (x == 123) {
@@ -368,7 +367,7 @@ do {
 ```
 
 ## switch/case
-```
+```javascript
 switch(month) {
 	case 1:
 		monthString = "January";
@@ -383,7 +382,7 @@ switch(month) {
 ```
 
 # Exception Handling
-```
+```javascript
 try {
 	//...
 }
@@ -398,7 +397,7 @@ finally {
 # Numbers
 
 ## Operators
-```
+```javascript
 let x = 10;
 let y = 5;
 x + y == 15
@@ -410,18 +409,18 @@ y % x == 5  //modulo
 ```
 
 ## Absolute Value
-```
+```javascript
 Math.abs(-x) == 10
 ```
 
 ## Min/Max
-```
+```javascript
 Math.min(x,y) == 5
 Math.max(x,y) == 10
 ```
 
 ## Floor/Ceiling
-```
+```javascript
 let f = 3.634;
 Math.floor(f) == 3
 Math.ceil(f) == 4
@@ -429,20 +428,20 @@ Math.ceil(f) == 4
 
 ## Convert Between Int/Float
 JavaScript only has the one number type which represents float and int
-```
+```javascript
 Math.round(3.0001) == 3 //true
 Math.round(f) == 4 //true
 x === 10.0 //true
 ```
 
 ## Parse Number from String
-```
+```javascript
 let result = parseInt("27");
 let dresult = parseFloat("27.89721");
 ```
 
 ## Random
-```
+```javascript
 let ri = LOWLIMIT + Math.round(Math.random()*(HIGHLIMIT-LOWLIMIT)); // Math.random returns float 0 -> 1
 // secure random only available in recent chrome and firefox
 var buf = new Uint8Array(1);
@@ -453,19 +452,19 @@ buf[0]
 # Strings
 
 ## Literals
-```
+```javascript
 let singleLineStr = "single line"; // can use single or double quotes
 let multiLineStr = `multi line...
 ...string`;
 ```
 
 ## Concatenation
-```
+```javascript
 str1 + str2
 ```
 
 ## Formatting
-```
+```javascript
 let xi = 123;
 let xs = "test";
 let msg1 = `An int ${xi} and string ${xs}`; // msg1 == "An int 123 and string test";
@@ -476,13 +475,13 @@ xi.toString(2); // "1111011"
 ```
 
 ## Convert Types to a String Representation
-```
+```javascript
 let svs = someVariable.toString();
 `This will obtain a string representation of ${someVariable}`;
 ```
 
 ## Strip/Trim
-```
+```javascript
 let xs = ",a,b,c,,";
 let xst = xs.trim(); // will remove whitespace at both ends of the string
 // javascript doesn't have a function that trims non-whitespace chars, use:
@@ -490,42 +489,42 @@ xs.replace(/^,+|,+$/gm,'');
 ```
 
 ## Split
-```
+```javascript
 let x = ",a,b,c,,";
 const tokenList = x.split(",");
 // the above returns: ['','a','b','c','',''] 
 ```
 
 ## Replace
-```
+```javascript
 let tx = x.replace(/,/g, ":"); // tx is ':a:b:c::'
 let y = "The Trees";
 let ty = y.replace(/Trees/g,"Forest"); // ty is "The Forest"
 ```
 
 ## StartsWith
-```
+```javascript
 if (y.startsWith("The")){
 ```
 
 ## EndsWith
-```
+```javascript
 if (y.endsWith("Forest")){
 ```
 
 ## Find a Substring
-```
+```javascript
 y.indexOf("Trees") == 4 //find first occurrence of substring, returns -1 if not found
 ```
 
 ## Select a Substring
-```
+```javascript
 y = y.substring(4); // slice from 4th character to the end of the string, returns: "Trees"
 y = y.substring(4,6); // (startIndex, endBeforeIndex), returns: "Tr"
 ```
 
 ## Regex
-```
+```javascript
 let test = "think this is a test string. that.";
 const matches = test.match(/[a-z]+/g); // returns ['think', 'this', 'is', 'a', 'test', 'string', 'that']
 
@@ -541,7 +540,7 @@ matchgroups[2] // "/index.php"
 # Binary Bytes/Buffers
 
 ## Declaration
-```
+```javascript
 byte key = (byte)0x65; //hex literal are ints so must be cast
 byte val = (byte)0b01101101;     //binary literal are ints so must be cast
 byte[] header = {(byte)0xFF,(byte)0xC3,(byte)0x00,(byte)0x00}; // hex literals are ints so must be cast
@@ -560,7 +559,7 @@ fs.writeFile('message.dat', buffer, (err) => { if(err) console.log(err); console
 ```
 
 ## Bytearray/Buffer Operations
-```
+```javascript
 var buffer = Buffer.alloc(16);
 buffer[3] = 0xFF;
 let numbyteswritten = buffer.writeUInt8(0x25); // (valueToWrite[,offset=0])
@@ -576,7 +575,7 @@ const bArr = buffer.toJSON().data; // as raw byte value array eg. [92, 115, 196,
 
 ## Bitwise Operations 
 
-```
+```javascript
 // bytes are treated as signed int, eg for shift operations
 // chars are treated as unsigned
 let a = 0b11011001;
@@ -584,37 +583,37 @@ let b = 0b10011101;
 ```
 
 ### And
-```
+```javascript
 // a & b
 (a & b) == 0b10011001
 ```
 
 ### Or
-```
+```javascript
 // a | b
 (a | b) == 0b11011101
 ```
 
 ### Xor
-```
+```javascript
 // a ^ b
 (a ^ b) == 0b01000100
 ```
 
 ### Not
-```
+```javascript
 // a ^ 0xFF
 (a ^ 0xFF) == 0b00100110
 ```
 
 ### Shift Left/Right
-```
+```javascript
 // a >> 4, or a << 5
 (a >> 4) == 0b00001101
 ```
 
 # CLI Argument Parsing
-```
+```javascript
 //the entire command line is in the argument list, so args[0] is usually node|nodejs, args[1] is the scriptname etc.
 // eg. node HelloWorld.js firstarg
 // prints: "firstarg"
@@ -626,7 +625,7 @@ console.log("Args[2]:"+process.argv[2]);
 ```
 
 # Execute Shell Commands
-```
+```javascript
 const { exec } = require("child_process");
 
 exec("ls -la", (error, stdout, stderr) => {
@@ -643,11 +642,11 @@ exec("ls -la", (error, stdout, stderr) => {
 ```
 
 # File Operations
-```
+```javascript
 // file modes
 ```
 ## Open File and Read
-```
+```javascript
 const fs = require('fs');
 
 // reads the entire file as a string into (load entire file into memory - may not be efficient for large files)
@@ -680,7 +679,7 @@ try {
 ```
 
 ## Open File and Write
-```
+```javascript
 const fs = require('fs');
 
 // write entire string to file
@@ -706,7 +705,7 @@ fs.appendFileSync('/path/to/message.dat', "\nA string of characters to append to
 
 ## Skip To File Location
 The read() function has an offset argument (relative from start of file)
-```
+```javascript
 let fs = require('fs');
 const BYTES_TO_READ = 16;
 const OFFSET_IN_FILE = 20;
@@ -734,14 +733,14 @@ fs.open('/path/to/file', 'r', function(err, fileToRead){
 ```
 
 ## Close File
-```
+```javascript
 fs.close(fileHandle, () => null); // callback (err)
 ```
 
 # Networking
 
 ## Sockets
-```
+```javascript
 // client send/receive
 
 var net = require('net');
@@ -777,7 +776,7 @@ server.listen(1337, '0.0.0.0');
 ## Higher Level Network Protocols (HTTP Client, Server)
 
 ### HTTP client
-```
+```javascript
 var http = require('http');
 
 //The url we want is: 'www.random.org/integers/?num=1&min=1&max=10&col=1&base=10&format=plain&rnd=new'
@@ -808,7 +807,7 @@ http.request(options, callback).end();
 ```
 
 ### HTTP server
-```
+```javascript
 const http = require('http');
 
 const requestListener = function (req, res) {
@@ -826,20 +825,20 @@ server.listen(8080);
 # JSON Serialization
  
 ## Serialize
-```
+```javascript
 let ob = {"a":123,"b":"test","c":[1,2,3]};
 let obstr = JSON.stringify(ob);
 ```
 
 ## Deserialize
-```
+```javascript
 let jstr = '{"a":123,"b":"test","c":[1,2,3]}';
 let ob = JSON.parse(jstr);
 console.log(ob['b']);
 ```
 
 # Object Introspection
-```
+```javascript
 class MyClassA {
   a = 123;
   constructor(initBar) {
@@ -869,13 +868,13 @@ MyClassA.name                // == "MyClassA"
 ```
 
 # Date/Time
-```
+```javascript
 var now = new Date().getTime(); // epoch time milliseconds
 var isoNow = now.toISOString(); // 2021-10-30T12:13:03.898Z
 ```
 
 # Sleep
-```
+```javascript
 // On Node 7.6.0 or higher
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -894,7 +893,7 @@ https://levelup.gitconnected.com/multithreading-with-nodejs-is-reality-10871986b
 TODO: need to include Promises, async etc.
 
 ## Threads
-```
+```javascript
 // Async functions (single-threaded)
 async function asyncCall() {
   const result = await someOtherAsyncFunction();
@@ -913,6 +912,6 @@ const { Worker } = require("worker_threads");(function () {
 ```
 
 ## Synchronization/Locking Primitives
-```
+```javascript
 // refer to the implementation here https://levelup.gitconnected.com/multithreading-with-nodejs-is-reality-10871986b8a9
 ```

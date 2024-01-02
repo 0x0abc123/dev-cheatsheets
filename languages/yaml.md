@@ -1,5 +1,5 @@
 # Example YAML file
-```
+```yaml
 ---
 # A YAML doc begins with three dashes and ends with three dots
 # A YAML file can have multiple documents, each beginning with three dashes and ending with three dots
@@ -19,7 +19,7 @@ something_else:
 ```
 
 # Comments
-```
+```yaml
 # this is single line comment, there are no multiline comments
 # single line comments include everything from the hash to the end of the line
 # single line comments are treated as whitespace and can appear anywhere in a YAML doc except between the colon and value in 'key: value'
@@ -30,7 +30,7 @@ something_else:
 YAML doesn't have classes, but anchors and aliases can be used to reduce repetition
 
 ## Declaration
-```
+```yaml
 things:
 	example_map_template: &mytemp1
 		name: override_me
@@ -55,7 +55,7 @@ things:
 # Variables
 
 ## Declaration/Assignment
-```
+```yaml
 somekey: somevalue
 somekey: !!str 12345  # explicit type casting
 spaces are allowed in key names: somevalue
@@ -70,7 +70,7 @@ somevalues:
 ```
 
 ## Data Basic Types
-```
+```yaml
 an_int_value: 1        # integer          
 a_float_value: 1.234    # float      
 an_octal: 02472256
@@ -119,7 +119,7 @@ english: null
 # Data Structures
 
 ## array/list
-```
+```yaml
 # using dashes/hyphens
 - one
 - two
@@ -144,7 +144,7 @@ hooo : [one, two, three]
 
 Known in YAML as a Mapping, it is an associative container, where each key is unique in the association and mapped to exactly one value. YAML places no restrictions on the type of keys; in particular, they are not restricted to being scalars. Example bindings include Perl’s hash, Python’s dictionary, and Java’s Hashtable. 
 
-```
+```yaml
 # Unordered set of key: value pairs.
 Block style: !!map # the explicit type cast is optional
   Clark : Evans
@@ -158,7 +158,7 @@ Flow style: !!map { Clark: Evans, Brian: Ingerson, Oren: Ben-Kiki } # the explic
 ```
 
 ## set
-```
+```yaml
 # Sets are represented as a
 # Mapping where each key is
 # associated with a null value
@@ -174,7 +174,7 @@ Flow style: !!map { Clark: Evans, Brian: Ingerson, Oren: Ben-Kiki } # the explic
 # Strings
 
 ## Literals
-```
+```yaml
 # multiline literals
 
 data: |

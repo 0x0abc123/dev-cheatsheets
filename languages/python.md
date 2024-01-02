@@ -1,5 +1,5 @@
 # Example Skeleton Main Program
-```
+```python
 import datetime
 def main():
     print('The date/time is',datetime.datetime.now())
@@ -9,7 +9,7 @@ if __name__ == "__main__":
 ```
 
 # Comments
-```
+```python
 # single line comment
 ''' multi line...
     ...comment '''
@@ -18,23 +18,23 @@ if __name__ == "__main__":
 # Console Input/Output
 
 ## Output
-```
+```python
 print("message",variable,"another literal")
 ```
 
 ## Input
-```
+```python
 person = raw_input('Enter your name: ')
 ```
 
 # Namespaces
 Python doesn't have namespaces. Use modules as a namespace. For example create `my_module.py`:
-```
+```python
 class foo(object):
    ...
 ```
 Then import it and reference its internal members:
-```
+```python
 import my_module
 f = my_module.foo()
 ```
@@ -42,7 +42,7 @@ f = my_module.foo()
 # Classes
 
 ## Declaration
-```
+```python
 class MyClass():
 
     def __init__(self, param1 = 0):
@@ -56,7 +56,7 @@ class MyClass():
 ```
 
 ## Inheritance
-```
+```python
 class MySubClass(MyClass):
 
     def __init__(self):
@@ -68,14 +68,14 @@ class MySubClass(MyClass):
 ```
 
 ## Instantiation and Method Invocation
-```
+```python
 mc = MyClass(1000)
 mc.bar == 1000 # True
 mc.DoSomething()
 ```
 
 # Functions
-```
+```python
 def MyFunction(argument1, argument2='defaultvalue'):
     print('arguments', argument1, argument2)
 	return str(argument1) + argument2
@@ -84,19 +84,19 @@ def MyFunction(argument1, argument2='defaultvalue'):
 # Variables
 
 ## Declaration/Assignment
-```
+```python
 # no need to declare the variable type before assigning a value
 someVariable = 123
 ```
 
 ## Ternary Operator
-```
+```python
 # python3 doesn't have a ternary operator but you can use:
 someVariable = 4535 if (otherVariable > 0) else 0
 ```
 
 ## Global Variables
-```
+```python
 globalVar1 = 12345
 
 def ChangesGlobalVar(val):
@@ -105,7 +105,7 @@ def ChangesGlobalVar(val):
 ```
 
 ## Data Basic Types
-```
+```python
 my_int = 1
 type(my_int) == int  # True
 
@@ -119,7 +119,7 @@ some_var = None  #python version of null
 ```
 
 ## Data Basic Type Comparison
-```
+```python
 a == b # compare if they are equal (both must be the same type)
 a != b # compare if they are not equal (both must be the same type)
 a > b
@@ -129,7 +129,7 @@ a <= b
 ```
 
 ## Logical Operators (Boolean Operands)
-```
+```python
 a and b
 a or b
 not a
@@ -138,7 +138,7 @@ not a
 # Data Structures
 
 ## list/array
-```
+```python
 my_list = list()
 my_list = [1,2,3]
 my_list[2] == 3 # True
@@ -169,7 +169,7 @@ doubledChars = [c+c for c in 'abcdefg'] # doubledChars == ['aa', 'bb', 'cc', 'dd
 ```
 
 ## dictionary
-```
+```python
 my_dict = dict()
 my_dict = {'a':1, 'b':2}
 my_dict['c'] = 3 # my_dict == {'a':1, 'b':2, 'c':3}
@@ -193,7 +193,7 @@ if 'a' in my_dict: # True
 ```
 
 ## set
-```
+```python
 set0 = set([1,2,3,'a','b','c']) # can initialise with a list
 set0 = {1, 2, 3,'a','b','c'} # alternative initialise syntax
 my_set = set()
@@ -215,7 +215,7 @@ for element in my_set:
 # Control Flow Statements
 
 ## if/else
-```
+```python
 if someVariable < 10:
     doThis()
 elif someVariable < 20:
@@ -225,7 +225,7 @@ else:
 ```
 
 ## for
-```
+```python
 for i in range(0,101):
     x = doSomething(i)
 	if x == 123:
@@ -235,7 +235,7 @@ for i in range(0,101):
 ```
 
 ## while
-```
+```python
 while someBooleanCondition:
     x = doSomething(i)
 	if x == 123:
@@ -246,7 +246,7 @@ while someBooleanCondition:
 
 ## switch/case
 python doesn't have case/switch statements, but it can be emulated using a dictionary and lambdas or function objects
-```
+```python
 def caseThree(arg):
     print('case three',arg)
 	
@@ -263,7 +263,7 @@ if inputCondition in cases:
 
 
 # Exception Handling
-```
+```python
 import traceback
 try:
     doSomething()
@@ -279,7 +279,7 @@ finally:
 # Numbers
 
 ## Operators
-```
+```python
 x = 10
 y = 5
 x + y == 15
@@ -295,18 +295,18 @@ x *= 4 # x = x * 4
 ```
 
 ## Absolute Value
-```
+```python
 abs(-x) == 10
 ```
 
 ## Min/Max
-```
+```python
 min(x,y) == 5
 max(x,y) == 10
 ```
 
 ## Floor/Ceiling
-```
+```python
 import math
 f = 3.634
 math.floor(f) == 3
@@ -314,19 +314,19 @@ math.ceil(f) == 4
 ```
 
 ## Convert Between Int/Float
-```
+```python
 int(f) == 3
 float(x) == 10.0
 ```
 
 ## Parse Number from String
-```
+```python
 int("0x11",16) == 17
 int("27") == 27
 ```
 
 ## Random
-```
+```python
 import random
 # cryptographic operations should use import secrets
 random.randint(0,100) // outputs int between 0 and 100 inclusive
@@ -338,19 +338,19 @@ pw = ''.join([secrets.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwx
 # Strings
 
 ## Literals
-```
+```python
 singleLineStr = "single line" # can use single or double quotes as delimiter
 multiLineStr = '''multi line
 string'''
 ```
 
 ## Concatenation
-```
+```python
 str1 + str2
 ```
 
 ## Formatting
-```
+```python
 msg0 = f"Something {str1} and string {x.foo()}"
 msg1 = 'An int {0} and string {1}'.format(123,'test') # msg1 == 'An int 123 and string test'
 msg2 = "Formatting examples, an int {}, a float to 3 places {:.3f}, binary {:08b} and hex {:02x}".format(
@@ -359,14 +359,14 @@ msg3 = f"{someByteValue :08b}" # '11011101'
 ```
 
 ## Convert Types to a String Representation
-```
+```python
 str(someVariable)
 repr(someVariable)
 f"This will obtain a string representation of {someVariable}"
 ```
 
 ## Strip/Trim
-```
+```python
 x = ',a,b,c,,'
 x.strip() # will remove whitespace at both ends of the string
 x.strip(',') # will remove the specified character from both ends, in this case the output == 'a,b,c'
@@ -375,42 +375,42 @@ x.rstrip(',') # will remove the specified character from end, in this case the o
 ```
 
 ## Split
-```
+```python
 x = ',a,b,c,,'
 xa = x.split(',') # xa == ['', 'a', 'b', 'c', '', '']
 ```
 
 ## Replace
-```
+```python
 x = ',a,b,c,,'
 x.replace(',',':') == ':a:b:c::'
 y = 'The Trees'
 y.replace('Trees','Forest') == 'The Forest'
 ```
 ## StartsWith
-```
+```python
 x.startswith(',') // True
 ```
 
 ## EndsWith
-```
+```python
 x.endswith(',') // True
 ```
 
 ## Find a Substring
-```
+```python
 'Trees' in y == True
 y.find('Trees') == 4  # find first index of substring
 ```
 
 ## Select a Substring
-```
+```python
 y[4:] == 'Trees'
 y[4:6] == 'Tr'
 ```
 
 ## Regex
-```
+```python
 import re
 
 # find a pattern
@@ -433,7 +433,7 @@ for i in range(len(m)):
 # Binary Bytes/Buffers
 
 ## Declaration
-```
+```python
 key = 0x65               #hex literal, assigned to an int variable
 val = 0b01101101     #binary literal
 header = bytes([0xFF,0xC3,0x00,0x00])     #bytes are immutable
@@ -442,7 +442,7 @@ data = bytearray()      #bytearrays are mutable
 ```
 
 ## Bytearray/Buffer Operations
-```
+```python
 data.append(0xFF)  #append as per list
 data.extend([0xE7,0x3A,0x44,0x0C]) #extend as per list
 # all other operations as per list
@@ -450,44 +450,44 @@ data.extend([0xE7,0x3A,0x44,0x0C]) #extend as per list
 
 ## Bitwise Operations 
 
-```
+```python
 a = 0b11011001
 b = 0b10011101
 
 ```
 
 ### And
-```
+```python
 # a & b
 f"{a & b:08b}" == '10011001'
 ```
 
 ### Or
-```
+```python
 # a | b
 f"{a | b :08b}" == '11011101'
 ```
 
 ### Xor
-```
+```python
 # a ^ b
 f"{a ^ b :08b}" == '01000100'
 ```
 
 ### Not
-```
+```python
 # a ^ 0xFF
 f"{a ^ 0xFF :08b}" == '00100110'
 ```
 
 ### Shift Left/Right
-```
+```python
 # a >> 4, or a << 5
 f"{a >> 4 :08b}" == '00001101'
 ```
 
 # CLI Argument Parsing
-```
+```python
 # simple arguments use sys.argv:
 
 import sys
@@ -495,7 +495,7 @@ import sys
 #or sys.argv[0] could be 'python' and sys.argv[1] is the script filename
 #example script invocation command line:
 #$ python3 /tmp/test.py argone argtwo
-sys.argv == ['/tmp/test.py', 'argone', argtwo']
+sys.argv == ['/tmp/test.py', 'argone', 'argtwo']
 sys.argv[1] == 'argone'
 
 # argparse is more appropriate for release quality tools:
@@ -525,7 +525,7 @@ print('target = '+args.target)
 ```
 
 # Execute Shell Commands
-```
+```python
 import subprocess
 process = subprocess.Popen(['echo', '"Hello stdout"'], stdout=subprocess.PIPE)
 stdout = process.communicate()[0]
@@ -535,11 +535,11 @@ print(stdout)
 ```
 
 # File Operations
-```
+```python
 # file modes (r+ == read/write) (r == read) (w == overwrite) (a == append) (w+ == write/create if not exist)
 ```
 ## Open File and Read
-```
+```python
 # read text lines
 with open('c:\\temp\\pB.txt', 'r') as fB:
     filelines = fB.readlines() # an array of strings, one element per file line
@@ -555,7 +555,7 @@ with open("/path/to/inputfile", "rb") as in_file:
 ```
 
 ## Open File and Write
-```
+```python
 # write text
 with open('c:\\temp\\file.txt', 'w') as f:
     f.write('First line\n')
@@ -568,7 +568,7 @@ with open('/tmp/od1.dat','wb') as outfile:
 ```
 
 ## Skip To File Location
-```
+```python
 # 'whence' is optional and specifies positioning
 # default is 0 == absolute file positioning
 # 1 == seek relative to the current position 
@@ -577,14 +577,14 @@ fileObject.seek(offset_num_bytes, whence)
 ```
 
 ## Close File
-```
+```python
 fileObject.close()
 ```
 
 # Networking
 
 ## Sockets
-```
+```python
 # client send/receive
 
 import socket
@@ -618,7 +618,7 @@ conn.close()
 ## Higher Level Network Protocols (HTTP Client, Server)
 
 ### HTTP client
-```
+```python
 import urllib.request
 # GET
 with urllib.request.urlopen('http://www.python.org/') as f:
@@ -639,7 +639,7 @@ with urllib.request.urlopen(req) as f:
 ```
 
 ### HTTP server
-```
+```python
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 
 class MyRequestHandler(BaseHTTPRequestHandler):
@@ -661,28 +661,28 @@ httpd.serve_forever()
 # JSON Serialization
 
 ## Serialize
-```
+```python
 import json
 mydict = {'a':[1,2,3],'b':'test'}
 json.dumps(mydict) == '{"a": [1, 2, 3], "b": "test"}'
 ```
 
 ## Deserialize
-```
+```python
 import json
 jsonstr = '{"a": [4, 5, 6], "b": "foo"}'
 json.loads(jsonstr) == {'a': [4, 5, 6], 'b': 'foo'}
 ```
 
 # Object Introspection
-```
+```python
 type(obj)
 dir(obj) #display obj's attributes,methods,variables
 var(obj) #similar to dir()
 ```
 
 # Date/Time
-```
+```python
 #format will be 2016-06-05 18:46:37.879761
 
 import datetime
@@ -705,7 +705,7 @@ str(int(time.time()))
 ```
 
 # Sleep
-```
+```python
 import time
 time.sleep(2.5) # seconds
 ```
@@ -713,7 +713,7 @@ time.sleep(2.5) # seconds
 # Multithreading
 The threading module runs virtual threads in a single real thread, for true multi-threading use the multiprocesing module and replace 'threading' with 'multiprocessing'
 ## Threads
-```
+```python
 import threading
 
 def MyThreadFunc(param1):
@@ -725,7 +725,7 @@ t.join()
 ```
 
 ## Synchronization/Locking Primitives
-```
+```python
 import threading
 mutex = threading.Lock()
 

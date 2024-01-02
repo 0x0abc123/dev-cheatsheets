@@ -1,5 +1,5 @@
 # Example Skeleton Main Program
-```
+```java
 // HelloWorld.java
 public class HelloWorld {
   public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class HelloWorld {
 ```
 
 # Comments
-```
+```java
 //this is single line comment
 /*
 this is a 
@@ -21,12 +21,12 @@ multiline comment
 # Console Input/Output
 
 ## Output
-```
+```java
 System.out.println("Hello World!");
 ```
 
 ## Input
-```
+```java
 import java.util.Scanner;
 ...
 Scanner scan = new Scanner(System.in);
@@ -39,7 +39,7 @@ int age = scan.nextInt();
 # Namespaces
 The package is Java's mechanism for managing namespaces. They allow programmers to create small private areas in which to declare classes. The names of those classes will not collide with identically named classes in different packages.
 
-```
+```java
 // filename: $PROJECTPATH/src/org/foobar/mypackage/myclass.java
 package org.foobar.mypackage;
 public class myclass { //...
@@ -53,11 +53,9 @@ org.foobar.mypackage.myclass m = new org.foobar.mypackage.myclass();
 
 # Classes
 
-Go does not provide classes but it does provide structs. Methods can be added on structs. This provides the behaviour of bundling the data and methods that operate on the data together akin to a class.
-
 ## Declaration
 Put the class declaration into a file named `$PROJECTPATH/src/org/foobar/mypackage/MyClassA.java`.
-```
+```java
 package org.foobar.mypackage;
 public class MyClassA {  
     protected String Bar;
@@ -121,7 +119,7 @@ public class MyThing extends AbstractThing {
 ```
 
 ## Inheritance
-```
+```java
 public class MyClassSubA extends MyClassA
 {
 	public MyClassSubA()
@@ -139,14 +137,14 @@ public class MyClassSubA extends MyClassA
 ```
 
 ## Instantiation and Method Invocation
-```
+```java
 MyClassA mca = new MyClassA("1000");
 mca.DoSomething();
 ```
 
 # Functions
 A function must be a static function in a class
-```
+```java
 public class FunctionModule
 {
 	public static String MyStaticFunction(String arg1, String arg2)
@@ -175,20 +173,20 @@ numbers.forEach( method );
 # Variables
 
 ## Declaration/Assignment
-```
+```java
 // must explicitly set the type:
 int someInt = 123;
 ```
 
 ## Ternary Operator
-```
+```java
 // (evaluate bool expression result) ? <return_if_true> : <else_return_this> ;
 int someVariable = (otherVariable > 0) ? 4535 : 0;
 ```
 
 ## Global Variables
 A global variable must be a static member of a class
-```
+```java
 public class FunctionModule
 {
 	public static String SOME_VALUE = "global";
@@ -199,7 +197,7 @@ FunctionModule.SOME_VALUE = "changed";
 ```
 
 ## Data Basic Types
-```
+```java
 int my_int = 1;
 short s = 123;
 long l = 2189738723;
@@ -216,7 +214,7 @@ Object something = null;
 ```
 
 ## Data Basic Type Comparison
-```
+```java
 a == b // compare if they are equal (both must be the same type)
 a != b // compare if they are not equal (both must be the same type)
 a > b
@@ -226,7 +224,7 @@ a <= b
 ```
 
 ## Logical Operators (Boolean Operands)
-```
+```java
 a && b // AND: evaluates right operand only if necessary
 a || b // OR: evaluates right operand only if necessary
 !a    // NOT
@@ -235,7 +233,7 @@ a || b // OR: evaluates right operand only if necessary
 # Data Structures
 
 ## array
-```
+```java
 
 int[] ia = {1,2,3};
 String[] sa = {"one","two","three","four"};
@@ -253,7 +251,7 @@ for (String s : sa) {
 ```
 
 ## list
-```
+```java
 import java.util.ArrayList;
 
 ArrayList<String> my_list = new ArrayList<String>();
@@ -286,7 +284,7 @@ List<String> all_matches = my_list.stream().filter(el -> el.startsWith("s")).col
 ```
 
 ## dictionary
-```
+```java
 import java.util.HashMap; // <- not threadsafe
 //import java.util.ConcurrentHashMap; <- threadsafe
 
@@ -312,7 +310,7 @@ if(my_dict.containsValue(1)) { //...
 ```
 
 ## set
-```
+```java
 import java.util.HashSet;
 // a hack for a threadsafe Set is to use ConcurrentHashMap.newKeySet().
 
@@ -337,7 +335,7 @@ for(String s : my_set)
 # Control Flow Statements
 
 ## if/else
-```
+```java
 if (someVariable < 10) {
     doThis();
 }
@@ -350,7 +348,7 @@ else {
 ```
 
 ## for
-```
+```java
 for (int i = 0; i < 101; i++) {
     int x = doSomething(i);
 	if (x == 123) {
@@ -369,7 +367,7 @@ for (int element : fibNumbers) {
 ```
 
 ## while
-```
+```java
 while (someBooleanCondition) {
     var x = doSomething();
 	if (x == 123) {
@@ -388,7 +386,7 @@ do {
 ```
 
 ## switch/case
-```
+```java
 switch(month) {
 	case 1:
 		monthString = "January";
@@ -403,7 +401,7 @@ switch(month) {
 ```
 
 # Exception Handling
-```
+```java
 try {
 	//...
 }
@@ -419,7 +417,7 @@ finally {
 # Numbers
 
 ## Operators
-```
+```java
 int x = 10;
 int y = 5;
 x + y == 15
@@ -431,37 +429,37 @@ y % x == 5  //modulo
 ```
 
 ## Absolute Value
-```
+```java
 abs(-x) == 10
 ```
 
 ## Min/Max
-```
+```java
 Math.min(x,y) == 5
 Math.max(x,y) == 10
 ```
 
 ## Floor/Ceiling
-```
+```java
 double f = 3.634;
 Math.floor(f) == 3
 Math.ceil(f) == 4
 ```
 
 ## Convert Between Int/Float
-```
+```java
 (int)f == 3
 (int)Math.round(f) == 4
 (double)x == 10.0
 ```
 
 ## Parse Number from String
-```
+```java
 int result = Integer.parseInt("27");
 double dresult = Double.parseDouble("27.89721");
 ```
 ## Random
-```
+```java
 import java.security.SecureRandom;
 int ri = SecureRandom.nextInt(upperBound);
 ```
@@ -469,7 +467,7 @@ int ri = SecureRandom.nextInt(upperBound);
 # Strings
 
 ## Literals
-```
+```java
 String singleLineStr = "single line"; // can only use double quotes
 // java doesn't have multiline string delimiters
 String multiLineStr = "multi line..." +
@@ -477,7 +475,7 @@ String multiLineStr = "multi line..." +
 ```
 
 ## Concatenation
-```
+```java
 str1 + str2
 
 // more efficient, however use StringBuffer if require threadsafe
@@ -488,62 +486,62 @@ String newstring = sb.toString();
 ```
 
 ## Formatting
-```
+```java
 String msg1 = String.format("An int %d and string %s",123,"test"); // msg1.equals("An int 123 and string test");
 String msg2 = String.format("Formatting examples, an int %d, a float to 3 places %.3f, hex %02X", 3, 1045.89735, 0x2F);
 // msg2.equals("Formatting examples, an int 3, a float 1045.897, hex 2F")
 ```
 
 ## Convert Types to a String Representation
-```
+```java
 String svs = someVariable.toString();
 String.format("This will obtain a string representation of %s",someVariable);
 ```
 
 ## Strip/Trim
-```
+```java
 String xs = ",a,b,c,,";
 String xt = xs.trim(); // will remove whitespace at both ends of the string
 // java doesn't have a function that trims non-whitespace chars, use xs.replaceAll(",", "")
 ```
 
 ## Split
-```
+```java
 String x = ",a,b,c,,";
 String[] tokenList = x.split(",",-1); // generally use -1 as 2nd param, the separator strings can be regexes
 // the above returns: ['','a','b','c','',''] 
 ```
 
 ## Replace
-```
+```java
 String tx = x.replaceAll(",",":"); // tx is ':a:b:c::'
 String y = "The Trees";
 String ty = y.replaceAll("Trees","Forest"); // ty is "The Forest"
 ```
 
 ## StartsWith
-```
+```java
 if (y.startsWith("The")){
 ```
 
 ## EndsWith
-```
+```java
 if (y.endsWith("Forest")){
 ```
 
 ## Find a Substring
-```
+```java
 y.indexOf("Trees") == 4 //find first occurrence of substring, returns -1 if not found
 ```
 
 ## Select a Substring
-```
+```java
 y = y.substring(4); // slice from 4th character to the end of the string, returns: "Trees"
 y = y.substring(4,6); // (startIndex, endBeforeIndex), returns: "Tr"
 ```
 
 ## Regex
-```
+```java
 import java.util.regex.*;
 String test = "think this is a test string. that.";
 Pattern pattern = Pattern.compile("[a-z]+");
@@ -567,7 +565,7 @@ while (matcher.find()) {
 # Binary Bytes/Buffers
 
 ## Declaration
-```
+```java
 byte key = (byte)0x65; //hex literal are ints so must be cast
 byte val = (byte)0b01101101;     //binary literal are ints so must be cast
 byte[] header = {(byte)0xFF,(byte)0xC3,(byte)0x00,(byte)0x00}; // hex literals are ints so must be cast
@@ -576,7 +574,7 @@ byte[] data = "<h1>Hello World</h1>".getBytes(); //convert string to UTF8 bytes
 ```
 
 ## Bytearray/Buffer Operations
-```
+```java
 import java.io.*;
 ByteArrayOutputStream out = new ByteArrayOutputStream();
 DataOutputStream dout = new DataOutputStream(out);
@@ -604,7 +602,7 @@ catch (Exception e) {
 
 ## Bitwise Operations 
 
-```
+```java
 // bytes are treated as signed int, eg for shift operations
 // chars are treated as unsigned
 char a = (char)0b11011001;
@@ -615,37 +613,37 @@ char b = (char)0b10011101;
 ```
 
 ### And
-```
+```java
 // a & b
 (char)(a & b) == (char)0b10011001
 ```
 
 ### Or
-```
+```java
 // a | b
 (char)(a | b) == (char)0b11011101
 ```
 
 ### Xor
-```
+```java
 // a ^ b
 (char)(a ^ b) == (char)0b01000100
 ```
 
 ### Not
-```
+```java
 // a ^ 0xFF
 (char)(a ^ 0xFF) == (char)0b00100110
 ```
 
 ### Shift Left/Right
-```
+```java
 // a >> 4, or a << 5
 (char)(a >> 4) == (char)0b00001101
 ```
 
 # CLI Argument Parsing
-```
+```java
 //the class name is NOT in the argument list, so args[0] is the first supplied command line argument after the class name
 // eg. java HelloWorld firstarg
 // prints: "firstarg"
@@ -657,7 +655,7 @@ public static void main(String[] args) {
 ```
 
 # Execute Shell Commands
-```
+```java
 String cmd = "ls -al";
 Runtime run = Runtime.getRuntime();
 Process pr = run.exec(cmd);
@@ -680,11 +678,11 @@ int exitCode = process.waitFor();
 ```
 
 # File Operations
-```
+```java
 // file modes
 ```
 ## Open File and Read
-```
+```java
 import java.io.*;
 
 // Read each line of the file into a string array. Each element of the array is one line of the file.
@@ -707,7 +705,7 @@ for(byte bx : fileContent)
 ```
 
 ## Open File and Write
-```
+```java
 import java.io.*;
 
 // write one line at a time to file
@@ -728,7 +726,7 @@ Files.write(new File("/tmp/out.dat").toPath(), binData);
 ```
 
 ## Skip To File Location
-```
+```java
 // Only supports absolute file positioning (offset from 0)
 
 import java.io.RandomAccessFile;
@@ -745,14 +743,14 @@ long position = file.getFilePointer(); // get current position offset from 0
 ```
 
 ## Close File
-```
+```java
 fileSteamObject.close();
 ```
 
 # Networking
 
 ## Sockets
-```
+```java
 // client send/receive
 
 import java.io.BufferedReader;
@@ -808,7 +806,7 @@ public class SocketServer {
 ## Higher Level Network Protocols (HTTP Client, Server)
 
 ### HTTP client
-```
+```java
 import java.io.IOException;
 import java.net.*;
 import java.io.*;
@@ -844,7 +842,7 @@ public class HttpClient
 
 ### HTTP server
 Oracle Java and OpenJDK since Java 6 have com.sun.net.httpserver
-```
+```java
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
@@ -882,12 +880,12 @@ Java 8 < 15 have the Nashorn engine, however it was removed in 15
 Should use a proper JSON library like Gson, Jackson etc.
  
 ## Serialize
-```
+```java
 // not possible using Nashorn
 ```
 
 ## Deserialize
-```
+```java
 import java.util.Map;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
@@ -915,7 +913,7 @@ public class HelloWorld {
 ```
 
 # Object Introspection
-```
+```java
 import java.lang.reflect.*;
 import java.util.*;
 
@@ -976,7 +974,7 @@ public class ReflectTest {
 ```
 
 # Date/Time
-```
+```java
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
@@ -996,7 +994,7 @@ catch (Exception e) { e.printStackTrace(); }
 ```
 
 # Sleep
-```
+```java
 import java.util.concurrent.TimeUnit;
 try {
 	TimeUnit.SECONDS.sleep(3);
@@ -1009,7 +1007,7 @@ catch (InterruptedException ie) {
 # Multithreading
 
 ## Threads
-```
+```java
 // no import statement required
 public class MyThread extends Thread
 {
@@ -1029,7 +1027,7 @@ public class MyThread extends Thread
 ```
 
 ## Synchronization/Locking Primitives
-```
+```java
 import java.util.concurrent.Semaphore;
 
 //semaphore
