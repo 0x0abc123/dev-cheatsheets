@@ -493,6 +493,11 @@ x := len(mySlice)
 last3Elements := mySlice[len(mySlice)-3:]
 
 // you can't remove an element, so you have to create a new slice from the original slice by concatenating the slice [:removeIndex] and [removeIndex+1:]
+
+// concatenate two arrays
+slice1 := []int{10, 11}
+slice2 := []int{12, 13}
+slice1 = append(slice1, slice2...)
 ```
 
 ### container/list
